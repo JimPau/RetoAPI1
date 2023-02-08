@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PostDetailsActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Titulo del Post:"
+        android:textColor="#00695C"
+        android:textAlignment="center"
+
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txt_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="3dp"
+        android:text="Titulo del Post"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comentarios:"
+        android:textAlignment="center"
+        android:textColor="#00695C"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txt_comentario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="3dp" />
+
+    <TextView
+        android:id="@+id/txt_titulo_comentario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="14dp"
+        android:textColor="#303F9F"
+        android:text="COMENTARIOS"
+        android:textSize="28sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_com"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

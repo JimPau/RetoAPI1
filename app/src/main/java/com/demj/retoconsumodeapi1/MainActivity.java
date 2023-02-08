@@ -4,7 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,7 +29,10 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private PostAdapter postAdapter;
 
+  //  private TextView txtitulo, txcomentario;
 
+
+    @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView=findViewById(R.id.rv_post);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext())); // ERROR
+
+        //txtitulo=findViewById(R.id.tvtitle);
+       //txcomentario=findViewById(R.id.tvbody);
         showPost();
     }
 
@@ -47,11 +57,20 @@ public class MainActivity extends AppCompatActivity {
                 if (response.isSuccessful()){
                     posts=response.body();
 
+                    Log.d("", "LISTA DE POST: " + response.body());
+                    for (int i = 0; i < posts.size()-1; i++) {
+                        Log.d("", "posts; " + posts.get(i).getId() + " " +posts.get(i).getTitle());
+
+                        //Intent pasar= new Intent(MainActivity.this,PostDetailsActivity.class);
+                      // pasar.putExtra("Titulo",txtitulo.getText().toString());
+                      // pasar.putExtra("Comentario",txcomentario.getText().toString());
+
+                    }
                    //tvid.setText(posts.get(tvid));
                     // aqui se debe poner asignar a cada uno de los controles lo datos de API
 
-                    postAdapter=new PostAdapter(posts,getApplicationContext()); // este codigo llama los datos del objeto del postadapter?
-                    recyclerView.setAdapter(postAdapter);
+                    postAdapter=new PostAdapter(posts,MainActivity.this); // este codigo llama los datos del objeto del postadapter?
+                    recyclerView.setAdapter(postAdapter); // EL ADAPTADOR  le transfiere o muestra al recyclerview
                 }
             }
 

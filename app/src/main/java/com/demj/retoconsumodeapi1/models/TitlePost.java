@@ -1,13 +1,11 @@
 package com.demj.retoconsumodeapi1.models;
-// campos de nuestro objeto gson
-public class Post {
+
+public class TitlePost {
     private Integer userId;
     private Integer id;
 
     private String title;
     private String body;
-
-    // Generamos sus métodos getters y setters
 
     public Integer getUserId() {
         return userId;
@@ -33,8 +31,7 @@ public class Post {
         this.title = title;
     }
 
-    public String getBody()
-    {
+    public String getBody() {
         return body;
     }
 
