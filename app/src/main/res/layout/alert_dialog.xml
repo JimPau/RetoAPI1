@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/plomo"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TÍTULO DE LA IMAGEN"
+        android:textStyle="bold"
+        android:textColor="#472938"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/txt_tituloimg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="3dp"
+        android:text="Titulo del la imagen"
+        android:background="#F6F2E5"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TÍTULO DEL ÁLBUM"
+        android:textStyle="bold"
+        android:textColor="#472938"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_tituloalbum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="3dp"
+        android:text="Titulo del álbum"
+        android:background="#F6F2E5"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/imgImagen"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginVertical="15dp"
+        android:scaleType="centerCrop"
+        android:layout_marginHorizontal="20dp">
+
+    </ImageView>
+
+
+
+</LinearLayout>

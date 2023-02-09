@@ -1,5 +1,7 @@
 package com.demj.retoconsumodeapi1.services;
 
+import com.demj.retoconsumodeapi1.models.Albums;
+import com.demj.retoconsumodeapi1.models.Photos;
 import com.demj.retoconsumodeapi1.models.Post;
 import com.demj.retoconsumodeapi1.models.Comments;
 
@@ -36,6 +38,18 @@ public interface ApiPost {
 
     @GET("/posts/{id}/comments")
     Call<List<Comments>> getCommentsByPostId(@Path("id") Integer postId);
+//----------------------------------------------------------------------------------
+    // Llamar a album -> userId , id y titulo
+    @GET("/albums")
+    public Call<List<Albums>> getAlbums ();
+
+    //Llamar el id y la url
+    @GET("/photos")
+     Call<List<Photos>> getPhotos();
+/// OBSERVACION
+   // @GET("/posts/{id}/comments")
+    //Call<List<Comments>> getCommentsByPostId(@Path("id") Integer postId);
+
 
 
 

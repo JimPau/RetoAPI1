@@ -1,51 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".PostDetailsActivity"
-    android:background="@drawable/imgpodt">
+    android:background="@drawable/nube"
+    tools:context=".AlbumsDetailsActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Titulo del Post:"
+        android:text="Titulo del Álbum:"
         android:textStyle="bold"
-        android:textColor="#00695C"
+        android:textColor="#283593"
         android:textAlignment="center"
-        android:textSize="16sp" />
-
+        android:background="#F4F4E3"
+        android:textSize="16sp"/>
 
     <TextView
-        android:id="@+id/txt_titulo"
+        android:id="@+id/txt_tituloalbum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="3dp"
-        android:text="Titulo del Post"
+        android:text="Titulo del Album"
+        android:background="@color/white"
         android:textAlignment="center"
         android:textSize="20sp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Comentarios:"
-        android:textAlignment="center"
-        android:textColor="#00695C"
-        android:textStyle="bold"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/txt_comentario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="3dp" />
-
     <TextView
         android:id="@+id/txt_titulo_comentario"
         android:layout_width="wrap_content"
@@ -54,12 +38,17 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="14dp"
         android:textColor="#303F9F"
-        android:text="COMENTARIOS"
+        android:text="Galería de Imagenes"
+        android:background="#F4F4E3"
+        android:textStyle="bold"
         android:textSize="28sp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_com"
+        android:id="@+id/rv_fotos"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 
 </LinearLayout>

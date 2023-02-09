@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/cardviewphotos"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="3dp"
+    android:layout_marginHorizontal="8dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="#BDA6CB"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+
+        <ImageView
+            android:id="@+id/imagenView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:id="@+id/tvcomentario2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="---------------------------------"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Titulo del Imagen:"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvtituloimagen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="titulo"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/tvcomentario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="---------------------------------"
+            android:textAlignment="center"/>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+<!-- <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:background="@color/black"/>
+
+
+    </RelativeLayout> -->
